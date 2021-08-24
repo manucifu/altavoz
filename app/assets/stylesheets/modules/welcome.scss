@@ -11,10 +11,12 @@
     font-family: "Ubuntu Medium", serif;
 
     .img-logo {
-        width: 100vw;
+        display: flex;
+        place-content: center;
+        margin: 5rem;
 
         img {
-            width: 100vw;
+            width: 85vw;
         }
     }
 
