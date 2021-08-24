@@ -1,0 +1,38 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.welcome {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Ubuntu Medium", serif;
+
+    .img-logo {
+        width: 100vw;
+
+        img {
+            width: 100vw;
+        }
+    }
+
+    .title {
+        margin: 2rem;
+        font-size: 6rem;
+        color: $white;
+        text-align: center;
+    }
+
+    .subtitle {
+        margin: 2rem;
+        font-size: 4rem;
+        color: $white;
+        text-align: center;
+        
+        a {
+            color: $main;
+        }
+    }
+}
