@@ -60,7 +60,7 @@ test:
   <<: *default
   database: elaltavoz_test
   username: postgres
-  password: admin
+  password: Altavoz1234
   host: www.cifuserver.es
 
 # As with config/credentials.yml, you never want to store sensitive information,
