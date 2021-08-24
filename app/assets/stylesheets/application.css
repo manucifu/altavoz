@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "Ubuntu Medium";
+  src: url("Ubuntu-Medium.ttf");
+}
+@font-face {
+  font-family: "Ubuntu Light";
+  src: url("Ubuntu-Light.ttf");
+}
+@font-face {
+  font-family: "Ubuntu Regular";
+  src: url("Ubuntu-Regular.ttf");
+}
+@font-face {
+  font-family: "Ubuntu Bold";
+  src: url("Ubuntu-Bold.ttf");
+}
+.welcome {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Ubuntu Medium", serif;
+}
+.welcome .img-logo {
+  display: flex;
+  place-content: center;
+  margin: 5rem;
+}
+.welcome .img-logo img {
+  width: 85vw;
+}
+.welcome .title {
+  margin: 2rem;
+  font-size: 6rem;
+  color: #ffffff;
+  text-align: center;
+}
+.welcome .subtitle {
+  margin: 2rem;
+  font-size: 4rem;
+  color: #ffffff;
+  text-align: center;
+}
+.welcome .subtitle a {
+  color: #5A2797;
+}
+.welcome .input-wrapper {
+  display: flex;
+  margin: 5rem;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome .input-wrapper .input {
+  width: 80vw;
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: "Ubuntu Regular";
+  border: 1px solid #5A2797;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.welcome .video-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.welcome .video-info {
+  opacity: 0;
+  height: 0;
+  background-color: #5A2797;
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: all 0.5s linear;
+}
+.welcome .video-info.show {
+  opacity: 1;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  place-content: center;
+}
+.welcome .video-info.show .left-info {
+  margin-right: 2rem;
+}
+.welcome .video-info.show .left-info img {
+  width: 20rem;
+}
+.welcome .video-info.show .right-info {
+  margin-left: 2rem;
+}
+.welcome .video-info.show .right-info .title {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  margin-top: 2rem;
+  text-align: initial;
+}
+.welcome .video-info.show .right-info .date {
+  font-size: 1.6rem;
+  color: #D4ABFF;
+  margin-top: 2rem;
+}
+.welcome .video-info.show .right-info .views {
+  font-size: 1.6rem;
+  color: #935DD5;
+  margin-top: 2rem;
+}
+
+.btn {
+  width: max-content;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 2rem;
+  font-family: "Ubuntu Medium";
+  border-radius: 0.5rem;
+  background-color: #5A2797;
+  color: white;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.btn:hover {
+  content: "";
+  background-color: rgba(90, 39, 151, 0.8);
+  transform: scale(1.1);
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+html *, html *:focus, html *:hover {
+  outline: none;
+}
+html input::-webkit-outer-spin-button,
+html input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+html a {
+  text-decoration: none;
+  color: black;
+}
+html input {
+  border-radius: 0;
+}
+html [contentEditable=true]:empty:before {
+  content: attr(data-placeholder);
+}
+html ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+html * {
+  box-sizing: border-box;
+}
+html button {
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+}
+html figure {
+  margin: 0;
+}
+html body {
+  margin: 0;
+  height: 100%;
+  background-color: #2F2F2F;
+}
+
+/*# sourceMappingURL=application.css.map */
