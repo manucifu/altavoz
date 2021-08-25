@@ -58,4 +58,5 @@ Rails.application.configure do
   # config.action_view.annotate_rendered_view_with_filenames = true
 
   config.assets.initialize_on_precompile = false
+  config.assets.compile = true
 end
