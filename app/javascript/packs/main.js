@@ -1,3 +1,36 @@
+var lastScrollTop = 0;
+var downScroll = false;
+var upScroll = false;
+
+checkScroll = function () {
+    let animatableElements = $('.js-animatable:not(.isVisible)');
+
+    let windowHeight = window.outerHeight;
+    let scrollTop = $('html').scrollTop();
+
+	var st = window.pageYOffset || document.documentElement.scrollTop; 
+	if (st > lastScrollTop){
+		upScroll = false;
+		downScroll = true;
+	} else {
+	   upScroll = true;
+	   downScroll = false;
+	}
+
+	lastScrollTop = st <= 0 ? 0 : st;
+
+    // Show normal animatable elements
+    for (let i = 0; i < animatableElements.length; i++) {
+        let positionFromTop = animatableElements[i].getBoundingClientRect().top;
+        let delay = 400;
+        if ((positionFromTop + 150) - windowHeight <= 0) {
+            setTimeout(function () {
+                $(animatableElements[i]).addClass('isVisible');
+            }, i * 200 + delay);
+        }
+    }
+}
+
 searchVideo = function() {
     let videoUrl = $("input[name='video_url']").val();
     let videoId = getVideoId(videoUrl);
@@ -40,12 +73,16 @@ getVideoId = function(url) {
     return video_id;
 }
 
+
+
 init = function () {
     console.log('HOLA');
+    checkScroll();
 };
 
 binds = function () {
     $('.js-checkVideoData').on('click', this.searchVideo);
+    $(window).on('scroll', this.checkScroll);
 };
 
 $(document).ready(function () {

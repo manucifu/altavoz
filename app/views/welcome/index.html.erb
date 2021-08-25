@@ -1,34 +1,105 @@
 
 <div class="main-content">
     <div class="welcome"> 
-        <div class="container">
-            <div class="img-logo">
-                <%= image_tag('altavoz-white.png') %>
+        <div class="welcome-part1"> 
+            <div class="container js-animatable">
+                <div class="title js-animatable">
+                    ¿Quieres compartir algún artista con nosotros?
+                </div>
+                <div class="subtitle js-animatable">
+                    Envíanos tu propuesta para el siguiente programa del altavoz
+                </div>
+                <div class="btn btn-transparent">Enviar propuesta</div>
             </div>
-            <div class="title">
-                Preparando la segunda versión del altavoz...
-            </div>
-            <div class="subtitle">
-                Mientras, gózate a nuestro padre en su <a target="_blank" href="https://www.twitch.tv/piezasmft"> Twitch </a>
-            </div>
-
-            <div class="input-wrapper">
-                <input class="input" type="text" id="url" name="video_url" placeholder="Pega aquí la URL del enlace de YouTube...">
-                <div class="btn js-checkVideoData">Subir video</div>
-            </div>
-
-            <div class="video-wrapper">
-                <div class="video-info" id="video-info">
-                    <div class="left-info"> 
-                        <div class="img"> <img src="" name="img"/> </div>
+        </div>    
+        <div class="welcome-part2"> 
+            <div class="container">
+                <div class="title js-animatable"> Requisitos </div>
+                <div class="req-container">
+                    <div class="req-wrapper">
+                        <div class="req-img js-animatable">
+                            <%= image_tag('stats_white.svg') %>
+                        </div>
+                        <div class="req-text js-animatable">
+                            La propuesta tiene que tener <br> menos de 30.000 reproducciones
+                        </div>
                     </div>
-                    <div class="right-info"> 
-                        <div name="title" class="title"> </div>
-                        <div name="created_at" class="date"> </div>
-                        <div name="views" class="views"> </div>
+                    <div class="req-wrapper">
+                        <div class="req-img js-animatable">
+                            <%= image_tag('calendar_white.svg') %>
+                        </div>
+                        <div class="req-text js-animatable">
+                            La propuesta no debe tener <br> más de 1 año de antigüedad
+                        </div>
+                    </div>
+                    <div class="req-wrapper">
+                        <div class="req-img js-animatable">
+                            <%= image_tag('one_white.svg') %>
+                        </div>
+                        <div class="req-text js-animatable">
+                            Cada usuario debe proponer <br> como máximo una canción
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+
+        <div class="welcome-part3">
+            <div class="container">
+                <div class="title js-animatable"> Enviar propuesta </div>
+            
+                <div class="input-wrapper">
+                    <input class="input" type="text" id="url" name="video_url" placeholder="Pega aquí la URL del enlace de YouTube...">
+                    <div class="btn btn-transparent black js-checkVideoData">Subir video</div>
+                </div>
+
+                <div class="video-wrapper">
+                    <div class="video-info" id="video-info">
+                        <div class="left-info"> 
+                            <div class="img"> <img src="" name="img"/> </div>
+                        </div>
+                        <div class="right-info"> 
+                            <div name="title" class="title"> </div>
+                            <div name="created_at" class="date"> </div>
+                            <div name="views" class="views"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    <!--
+        <div class="welcome-part1"> 
+            <div class="container">
+                <div class="img-logo">
+                    <%= image_tag('altavoz-white.png') %>
+                </div>
+                <div class="title">
+                    Preparando la segunda versión del altavoz...
+                </div>
+                <div class="subtitle">
+                    Mientras, gózate a nuestro padre en su <a target="_blank" href="https://www.twitch.tv/piezasmft"> Twitch </a>
+                </div>
+
+                <div class="input-wrapper">
+                    <input class="input" type="text" id="url" name="video_url" placeholder="Pega aquí la URL del enlace de YouTube...">
+                    <div class="btn js-checkVideoData">Subir video</div>
+                </div>
+
+                <div class="video-wrapper">
+                    <div class="video-info" id="video-info">
+                        <div class="left-info"> 
+                            <div class="img"> <img src="" name="img"/> </div>
+                        </div>
+                        <div class="right-info"> 
+                            <div name="title" class="title"> </div>
+                            <div name="created_at" class="date"> </div>
+                            <div name="views" class="views"> </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        -->
     </div>
  </div>

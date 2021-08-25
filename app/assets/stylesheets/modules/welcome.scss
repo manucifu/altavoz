@@ -8,7 +8,186 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: "Ubuntu Medium", serif;
+    font-family: "Inria Regular", serif;
+
+    .welcome-part1 {
+        height: 100vh;
+        width: 100%;
+        background-image: url('/assets/fondo_andrea_pirlo_1.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        place-content: center;
+        position: sticky;
+        top: 8rem;
+        z-index: 1;
+
+        .container {
+            max-width: 75vw;
+            background-color: rgba(#2F2F2F, 0.8);
+            opacity: 0;
+            transition: all .5s linear;
+            padding-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+
+            &.isVisible {
+                opacity: 1;
+            }
+
+
+            .title {
+                margin: 3rem;
+                font-size: 5rem;
+                color: white;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: "Inria Bold", serif;
+                transform: translateY(100%);
+                opacity: 0;
+                transition: all .5s linear .5s;
+
+                &.isVisible {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        
+            .subtitle {
+                margin: 3rem;
+                margin-top: 0;
+                font-size: 2rem;
+                text-transform: uppercase;
+                color: white;
+                text-align: center;
+                transform: translateY(100%);
+                opacity: 0;
+                transition: all .5s linear .75s;
+
+                &.isVisible {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            .btn {
+                max-width: 25vw;
+                text-transform: uppercase;
+            }
+        }
+
+
+        @media (max-width: 767px) {
+            .container {
+                .title {
+                    font-size: 4rem;
+                }
+
+                .btn {
+                    max-width: 45vw;
+                }
+            }
+        }
+    }
+
+    .welcome-part2 {
+        height: auto;
+        width: 100%;
+        background-color: #5A2797;
+        display: flex;
+        align-items: center;
+        place-content: center;
+        padding-bottom: 10rem;
+        z-index: 2;
+
+        .title {
+            margin-top: 10rem;
+        }
+
+        .req-container {
+            margin-top: 10rem;
+
+            .req-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 6rem;
+
+                .req-img {
+                    margin: 4rem;
+                    transform: translateX(-100%);
+                    transition: all .5s linear;
+                    opacity: 0;
+
+                    &.isVisible {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+
+                    img {
+                        width: 20vw;
+                        max-width: 25rem;
+                    }
+                }
+
+                .req-text {
+                    font-family: "Inria Regular", serif;
+                    font-size: 3rem;
+                    color: white;
+                    text-align: center;
+                    transform: translateY(100%);
+                    transition: all .5s linear;
+                    opacity: 0;
+
+                    &.isVisible {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+            }
+
+        }
+
+        @media (max-width: 767px) {
+            .req-container {
+                .req-wrapper {
+                    .req-img {
+                        img {
+                            width: 30vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .welcome-part3 {
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        place-content: center;
+        padding-bottom: 10rem;
+        z-index: 2;
+        overflow-x: hidden;
+
+        .title {
+            margin-top: 10rem;
+            font-family: "Inria Bold", serif;
+            color: #2F2F2F;
+        }
+
+        .input-wrapper {
+            .btn {
+                max-width: 25vw;
+            }
+        }
+    }
 
     .img-logo {
         display: flex;
@@ -17,24 +196,6 @@
 
         img {
             width: 85vw;
-        }
-    }
-
-    .title {
-        margin: 2rem;
-        font-size: 6rem;
-        color: #ffffff;
-        text-align: center;
-    }
-
-    .subtitle {
-        margin: 2rem;
-        font-size: 4rem;
-        color: #ffffff;
-        text-align: center;
-        
-        a {
-            color: #5A2797;
         }
     }
 
@@ -49,9 +210,8 @@
             font-size: 2rem;
             color: white;
             background-color: rgba($color: #ffffff, $alpha: 0.1);
-            font-family: 'Ubuntu Regular';
+            font-family: "Inria Regular", serif;
             border: 1px solid #5A2797;
-            border-radius: 0.5rem;
             margin-bottom: 2rem;
             padding: 1rem;
         }
@@ -69,15 +229,14 @@
         height: 0;
         background-color: #5A2797;
         padding: 2rem;
-        border-radius: 1rem;
-        transition: all .5s linear;
 
         &.show {
             opacity: 1;
-            height: max-content;
+            height: auto;
             display: flex;
             align-items: center;
-            width: max-content;
+            width: 65vw;
+            height: 20vw;
             place-content: center;
 
             .left-info {
@@ -97,18 +256,44 @@
                     margin: 0;
                     margin-top: 2rem;
                     text-align: initial;
+                    opacity: 1;
+                    transform: none;
+                    transition: none;
                 }
 
                 .date {
                     font-size: 1.6rem;
-                    color: #D4ABFF;
+                    color: white;
                     margin-top: 2rem;
+                    transition: none;
                 }
 
                 .views {
                     font-size: 1.6rem;
-                    color: #935DD5;
+                    color: white;
                     margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    transition: none;
+                }
+            }
+        }
+
+        @media (max-width: 767px) {
+            &.show {
+                height: auto;
+                flex-direction: column;
+
+                .left-info {
+                    margin-right: 0;
+                }
+
+                .right-info {
+                    margin-left: 0;
+                    text-align: center;
+
+                    .title {
+                        text-align: center;
+                    }
                 }
             }
         }

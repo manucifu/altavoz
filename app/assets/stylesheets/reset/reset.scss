@@ -50,7 +50,14 @@ html {
     body {
         margin: 0;
         height: 100%;
-        background-color: #2F2F2F;
+        background-color: #ffffff;
     }
 
+    @media (max-width: 767px) {
+        font-size: 8px;
+
+        body {
+            //overflow-x: hidden;
+        }
+    }
 }

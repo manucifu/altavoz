@@ -1,10 +1,10 @@
+/*
 .btn {
     width: max-content;
     padding: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
     font-size: 2rem;
-    font-family: 'Ubuntu Medium';
     border-radius: 0.5rem;
     background-color: #5A2797;
     color: white;
@@ -16,5 +16,103 @@
         content: "";
         background-color: rgba($color: #5A2797, $alpha: 0.8);
         transform: scale(1.1);
+    }
+}
+*/
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    font-family: "Inria Regular", serif;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+
+    .inline {
+        display: inline-flex;
+        width: auto;
+        padding: 0 3rem;
+    }
+
+
+    &.btn-transparent {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        color: white;
+        transition: all 0.2s linear 0.4s;
+    
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -1;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            top: -1px;
+            right: -1px;
+            background: #5A2797;
+            transition: 0.8s ease-in-out;
+            transform-origin: right;
+            transform: scaleX(1.1);
+        }
+
+            
+        &:hover {
+            &.black {
+                color: #2F2F2F;
+            }
+
+            &:before {
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                width: 0;
+                transform: scaleX(0);
+            }
+        }
+    }
+}
+
+.title {
+    margin: 2rem;
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all .5s linear .5s;
+
+    &.isVisible {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header {
+    height: 8rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: #2F2F2F;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    .img-logo {
+        display: flex;
+        place-items: center;
+
+        img {
+            height: 75%;
+            cursor: pointer;
+        }
     }
 }
