@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url_youtube: MyString
+  url_spotify: MyString
+  nombre: MyString
+  activo: false
+  temporada_capitulo: one
+  descripcion: MyString
+
+two:
+  url_youtube: MyString
+  url_spotify: MyString
+  nombre: MyString
+  activo: false
+  temporada_capitulo: two
+  descripcion: MyString

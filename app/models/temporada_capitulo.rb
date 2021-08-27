@@ -1,0 +1,2 @@
+class TemporadaCapitulo < ApplicationRecord
+end

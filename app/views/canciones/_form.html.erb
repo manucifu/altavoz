@@ -1,0 +1,47 @@
+<%= form_with(model: cancione) do |form| %>
+  <% if cancione.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cancione.errors.count, "error") %> prohibited this cancione from being saved:</h2>
+
+      <ul>
+        <% cancione.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :url_youtube %>
+    <%= form.text_field :url_youtube %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url_spotify %>
+    <%= form.text_field :url_spotify %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :activo %>
+    <%= form.check_box :activo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :temporada_capitulo_id %>
+    <%= form.text_field :temporada_capitulo_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

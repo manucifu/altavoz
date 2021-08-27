@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Num temporada:</strong>
+  <%= @temporada_capitulo.num_temporada %>
+</p>
+
+<p>
+  <strong>Num capitulo:</strong>
+  <%= @temporada_capitulo.num_capitulo %>
+</p>
+
+<p>
+  <strong>Activo:</strong>
+  <%= @temporada_capitulo.activo %>
+</p>
+
+<p>
+  <strong>Activo desde:</strong>
+  <%= @temporada_capitulo.activo_desde %>
+</p>
+
+<p>
+  <strong>Activo hasta:</strong>
+  <%= @temporada_capitulo.activo_hasta %>
+</p>
+
+<%= link_to 'Edit', edit_temporada_capitulo_path(@temporada_capitulo) %> |
+<%= link_to 'Back', temporada_capitulos_path %>

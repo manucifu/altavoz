@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url youtube:</strong>
+  <%= @cancione.url_youtube %>
+</p>
+
+<p>
+  <strong>Url spotify:</strong>
+  <%= @cancione.url_spotify %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cancione.nombre %>
+</p>
+
+<p>
+  <strong>Activo:</strong>
+  <%= @cancione.activo %>
+</p>
+
+<p>
+  <strong>Temporada capitulo:</strong>
+  <%= @cancione.temporada_capitulo_id %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @cancione.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_cancione_path(@cancione) %> |
+<%= link_to 'Back', canciones_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_temporada: 1
+  num_capitulo: 1
+  activo: false
+  activo_desde: 2021-08-27
+  activo_hasta: 2021-08-27
+
+two:
+  num_temporada: 1
+  num_capitulo: 1
+  activo: false
+  activo_desde: 2021-08-27
+  activo_hasta: 2021-08-27

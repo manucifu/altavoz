@@ -1,0 +1,42 @@
+<%= form_with(model: temporada_capitulo) do |form| %>
+  <% if temporada_capitulo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(temporada_capitulo.errors.count, "error") %> prohibited this temporada_capitulo from being saved:</h2>
+
+      <ul>
+        <% temporada_capitulo.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :num_temporada %>
+    <%= form.number_field :num_temporada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :num_capitulo %>
+    <%= form.number_field :num_capitulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :activo %>
+    <%= form.check_box :activo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :activo_desde %>
+    <%= form.date_select :activo_desde %>
+  </div>
+
+  <div class="field">
+    <%= form.label :activo_hasta %>
+    <%= form.date_select :activo_hasta %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module TemporadaCapitulosHelper
+end
